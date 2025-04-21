@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { TextField, Button, Container, Typography, Box } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./App.css";
 
 const Register = () => {
@@ -81,15 +81,15 @@ const Register = () => {
         >
           Register
         </Button>
-        <Button
-          variant="outlined"
-          color="primary"
-          fullWidth
-          onClick={() => navigate("/login")}
-          sx={{ mt: 1, borderRadius: "8px", textTransform: "none" }}
-        >
-          Go to Login
-        </Button>
+        <Typography 
+        variant="body2" 
+        sx={{ mt: 2, color: "primary.main", textAlign: "center" }}
+      >
+        Already have an account?{" "}
+        <Link to="/login" style={{ textDecoration: "none", color: "blue" }}>
+          Login
+        </Link>
+      </Typography>
       </Box>
     </Container>
   );

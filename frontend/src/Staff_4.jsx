@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Container, Typography, Button, TextField, List, ListItem, ListItemText, IconButton, Box } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-const Staff_2 = () => {
+const Staff_4 = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState("");
   const [role, setRole] = useState("");
@@ -23,11 +23,11 @@ const Staff_2 = () => {
         setItems(JSON.parse(storedItems));
       }
 
-      if (storedRole !== "staff2") {
-        navigate("/staff3"); // Redirect to staff page if not admin
+      if (storedRole !== "staff4") {
+        navigate("/"); // Redirect to staff page if not admin
       }
     }else{
-      navigate("/staff2"); // Redirect to admin page if admin
+      navigate("/staff4"); // Redirect to admin page if admin
     }
   }, [navigate]);
 
@@ -126,4 +126,4 @@ const Staff_2 = () => {
   );
 };
 
-export default Staff_2;
+export default Staff_4;

@@ -24,10 +24,10 @@ const Admin = () => {
       }
 
       if (storedRole !== "admin") {
-        navigate("/staff2"); // Redirect to staff page if not admin
+        navigate("/staff"); // Redirect to staff page if not admin
       }
     }else{
-      navigate("/login"); // Redirect to admin page if admin
+      navigate("/admin"); // Redirect to admin page if admin
     } 
   }, [navigate]);
 
@@ -69,8 +69,11 @@ const Admin = () => {
           mt: 5 // Adds some margin at the top
         }}
       >
-        <Typography variant="h4" sx={{ color: "#333", mb: 2 }}>
-          Welcome, Admin {user}
+        <Typography variant="h3" sx={{ color: "#1976d2", mb: 2 }}>
+         WELCOME
+        </Typography>
+        <Typography variant="h5" sx={{ color: "#333", mb: 2 }}>
+         Admin {user}
         </Typography>
         <TextField
           label="New Item"

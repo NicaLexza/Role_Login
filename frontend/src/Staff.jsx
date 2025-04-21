@@ -24,10 +24,10 @@ const Staff = () => {
       }
 
       if (storedRole !== "staff") {
-        navigate("/admin"); // Redirect to staff page if not admin
+        navigate("/staff2"); // Redirect to staff page if not admin
       }
     }else{
-      navigate("/login"); // Redirect to admin page if admin
+      navigate("/staff"); // Redirect to admin page if admin
     }
   }, [navigate]);
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { TextField, Button, Container, Typography, Box } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -32,12 +32,12 @@ const Login = () => {
         navigate("/staff");
      } else if(role === "staff2"){
         navigate("/staff2");
-     }
-      else if(role === "staff3"){
-          navigate("/staff3");
-    }
-       else { 
-      alert("Invalid role");
+     } else if(role === "staff3"){
+        navigate("/staff3");
+     } else if(role === "staff4"){
+        navigate("/staff4");
+     } else { 
+        alert("Invalid role");
      }
     } catch (error) {
       alert("Login failed");
@@ -86,15 +86,15 @@ const Login = () => {
         >
           Login
         </Button>
-        <Button
-          variant="outlined"
-          color="primary"
-          fullWidth
-          onClick={() => navigate("/")}
-          sx={{ mt: 1, borderRadius: "10px", textTransform: "none" }}
-        >
-          Go to Register
-        </Button>
+        <Typography 
+        variant="body2" 
+        sx={{ mt: 2, color: "primary.main", textAlign: "center" }}
+      >
+        Don't have an account?{" "}
+        <Link to="/" style={{ textDecoration: "none", color: "blue" }}>
+          Register
+        </Link>
+      </Typography>
       </Box>
     </Container>
   );

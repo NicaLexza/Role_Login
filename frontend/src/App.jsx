@@ -5,6 +5,7 @@ import Admin from "./Admin";
 import Staff from "./Staff";
 import Staff_2 from "./Staff_2";
 import Staff_3 from "./Staff_3";
+import Staff_4 from "./Staff_4";
 
 
 
@@ -19,6 +20,7 @@ return (
       <Route path="/staff" element = {<Staff/>} />
       <Route path="/staff2" element = {<Staff_2/>} />
       <Route path="/staff3" element = {<Staff_3/>} />
+      <Route path="/staff4" element = {<Staff_4/>} />
     </Routes>
  </Router>
 );
